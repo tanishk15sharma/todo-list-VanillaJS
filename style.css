@@ -34,15 +34,14 @@ h1 {
 }
 
 .todo-list {
-    padding: 1rem;
+    /* padding: 1rem; */
     font-family: cursive;
     font-size: larger;
     list-style-type: none;
-    
-
+    display: inline;
 }
 .add-btn{
-    padding: 0.4rem;
+    /* padding: 0.4rem; */
     margin-left: 2%;
     border-radius: 10%;
     cursor: pointer;
@@ -59,6 +58,10 @@ h1 {
     color: whitesmoke;
   }
 
-
-
-
+.list-container {
+    border-bottom: 2px solid;
+     display: flex; 
+     max-width: 80%;
+     margin-left: 40px;
+      
+}

@@ -24,10 +24,17 @@ function displayToDoList(event) {
 
 
     toDoList.innerHTML = list.map(items => {
-        return ` <ul class="todo-list" >
-        <li>${items.name}</li>
-    </ul>`
+
+        return ` <div class="list-container" >
+          <ul class="todo-list" >
+        <li>  <input type="checkBox" class="checkBox"  >
+        ${items.name}</li>
+    </ul></div>
+    `
     }).join("");
 
     // this.reset();
 }
+
+
+
