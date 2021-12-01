@@ -2,11 +2,11 @@ const inputToDo = document.querySelector(".input-todo");
 const addBtn = document.querySelector(".add-btn");
 const toDoList = document.querySelector(".todo-list");
 
-addBtn.addEventListener("click", displayToDoList)
+addBtn.addEventListener("click", displayToDoList);
 
 
 let list = [];
-
+let checkboxes;
 
 
 function displayToDoList(event) {
@@ -22,18 +22,31 @@ function displayToDoList(event) {
 
     list.push(listObj);
 
+    // console.log(list);
 
-    toDoList.innerHTML = list.map(items => {
+    toDoList.innerHTML = list.map((items, i) => {
 
-        return ` <div class="list-container" >
-          <ul class="todo-list" >
-        <li>  <input type="checkBox" class="checkBox"  >
-        ${items.name}</li>
-    </ul></div>
-    `
+        return `<li class="list-item" > 
+         <input type="checkBox" class="checkBox"  data-index=${i}   id="item${i}"   />
+         <label for="item${i}"  class="checkbox-name" id="lable${i}" > ${items.name} </label>
+         </li>`
     }).join("");
 
     // this.reset();
+
+     checkboxes =  document.querySelectorAll(".checkBox");
+
+     checkboxes.forEach((c,i) => c.addEventListener("click",() =>{
+         let label = document.querySelector(`#lable${i}`)
+         if(c.checked ){
+           label.classList.add("line-through");
+         }else{
+             label.classList.remove("line-through")
+             
+         }
+     }   )  )
+
+     console.log(checkboxes);
 }
 
 
