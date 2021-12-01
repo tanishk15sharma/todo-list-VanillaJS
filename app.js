@@ -1,11 +1,12 @@
 const inputToDo = document.querySelector(".input-todo");
 const addBtn = document.querySelector(".add-btn");
 const toDoList = document.querySelector(".todo-list");
+const delBtn = document.querySelector("#delbtn")
 
 addBtn.addEventListener("click", displayToDoList);
 
 
-let list = [];
+let list = JSON.parse(localStorage.getItem("items")) || [];
 let checkboxes;
 
 
@@ -32,6 +33,9 @@ function displayToDoList(event) {
          </li>`
     }).join("");
 
+
+     localStorage.setItem("items", JSON.stringify(list) );
+
     // this.reset();
 
      checkboxes =  document.querySelectorAll(".checkBox");
@@ -46,8 +50,16 @@ function displayToDoList(event) {
          }
      }   )  )
 
-     console.log(checkboxes);
+    //  console.log(checkboxes);
 }
 
+// function populateList(list, toDoList) 
+
+function clearDisplay () {
+     localStorage.clear();
+     toDoList.innerHTML = ""
 
 
+}
+
+delBtn.addEventListener("click",clearDisplay  )
