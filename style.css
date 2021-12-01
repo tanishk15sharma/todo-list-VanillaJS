@@ -4,6 +4,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
 }
 
 .todo-container {
@@ -19,16 +20,12 @@ html {
     border-radius: 2%;
     box-shadow: 1px 1px 5px black;
     overflow-y: hidden;
-
-    
-
 }
 
 .input-todo {
      max-width: 50%; 
     padding: 0.5rem;
     border-radius: 20px;
-
     background-color: #374151;
     color: whitesmoke;
     font-size: large;
@@ -63,6 +60,21 @@ h1 {
     color: whitesmoke;
 
 }
+.del-btn {
+    padding: 0.4rem;
+
+    border-radius: 10%;
+    cursor: pointer;
+    font-family:sans-serif;
+    font-size: large;
+    transition: 0.3s;
+    background-color: #374151;
+    color: whitesmoke;
+    display: none;
+}
+.del-visibility {
+    display:inline;
+}
 
 .add-item{
     /* margin-left: 14%; */
@@ -76,12 +88,15 @@ h1 {
      color: black; 
     opacity: 0.8;
     box-shadow: 2px 2px 4px #000000;
-
   }
 
 .li-class{
     /* text-align: center; */
-    
+    padding:  0 ;
+    margin: 1.5em 0 ;
+    font-family: cursive;
+    font-size: 24px;
+    list-style-type: none;
 }
 
 .todo-list > .list-item {
@@ -91,8 +106,6 @@ h1 {
     /* margin-left: 25px; */
     align-items: center;
     opacity: 0.9;
-    
-    
 }
 
 .list-item {

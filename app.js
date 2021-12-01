@@ -1,7 +1,8 @@
 const inputToDo = document.querySelector(".input-todo");
 const addBtn = document.querySelector(".add-btn");
 const toDoList = document.querySelector(".todo-list");
-const delBtn = document.querySelector("#delbtn")
+const delBtn = document.querySelector("#delbtn");
+const msgShow = document.querySelector("#msg-show-again")
 
 addBtn.addEventListener("click", displayToDoList);
 
@@ -30,8 +31,9 @@ function displayToDoList(event) {
         return `<li class="list-item" > 
          <input type="checkBox" class="checkBox"  data-index=${i}   id="item${i}"   />
          <label for="item${i}"  class="checkbox-name" id="lable${i}" > ${items.name} </label>
-         </li>`
+         </li> `
     }).join("");
+    
 
 
      localStorage.setItem("items", JSON.stringify(list) );
@@ -48,18 +50,26 @@ function displayToDoList(event) {
              label.classList.remove("line-through")
              
          }
-     }   )  )
-
+     }   )  );
+btnVisibility()
     //  console.log(checkboxes);
 }
 
 // function populateList(list, toDoList) 
 
-function clearDisplay () {
-     localStorage.clear();
-     toDoList.innerHTML = ""
-
-
+function btnVisibility() {
+    delBtn.classList.add("del-visibility")
 }
 
-delBtn.addEventListener("click",clearDisplay  )
+function clearDisplay () {
+     localStorage.clear();
+     toDoList.innerHTML = "";
+     delBtn.classList.remove("del-visibility");
+     return  msgShow.innerHTML =   ` <li class="li-class"   >❝ When you're  curious, you find lots of interesting things to do ❞   </li>`
+}
+
+delBtn.addEventListener("click",clearDisplay)
+
+
+// btnVisibility()
+
