@@ -4,9 +4,6 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
-
-
 }
 
 .todo-container {
@@ -40,6 +37,8 @@ h1 {
     padding: 1rem;
     font-family: cursive;
     font-size: larger;
+    list-style-type: none;
+    
 
 }
 .add-btn{
@@ -52,8 +51,7 @@ h1 {
 }
 
 .add-item{
-    margin-left: 8%;
-
+    margin-left: 14%;
 }
 
 .add-btn:hover {

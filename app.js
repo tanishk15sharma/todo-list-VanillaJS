@@ -1,19 +1,33 @@
 const inputToDo = document.querySelector(".input-todo");
 const addBtn = document.querySelector(".add-btn");
+const toDoList = document.querySelector(".todo-list");
 
-addBtn.addEventListener("click",displayToDoList  )
+addBtn.addEventListener("click", displayToDoList)
 
 
-let list =[];
+let list = [];
+
 
 
 function displayToDoList(event) {
-    event.preventDefault()
-    let input = inputToDo.value ;
-    console.log(input);
+    let listObj = {};
+    event.preventDefault();
+    let input = inputToDo.value;
 
-    list.push(input);
-    console.log(list);
+    if (input === "" || input === null) {
+        return alert("Please! Dont let the field empty")
+    }
+    listObj.name = input;
+    listObj.status = false;
+
+    list.push(listObj);
+
+
+    toDoList.innerHTML = list.map(items => {
+        return ` <ul class="todo-list" >
+        <li>${items.name}</li>
+    </ul>`
+    }).join("");
+
+    // this.reset();
 }
-
-
