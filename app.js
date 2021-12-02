@@ -2,7 +2,9 @@ const inputToDo = document.querySelector(".input-todo");
 const addBtn = document.querySelector(".add-btn");
 const toDoList = document.querySelector(".todo-list");
 const delBtn = document.querySelector("#delbtn");
-const msgShow = document.querySelector("#msg-show-again")
+const msgShow = document.querySelector("#msg-show-again");
+const showBtn = document.querySelector("#show-btn")
+
 
 addBtn.addEventListener("click", displayToDoList);
 
@@ -36,7 +38,7 @@ function displayToDoList(event) {
     
 
 
-     localStorage.setItem("items", JSON.stringify(list) );
+      localStorage.setItem("items", JSON.stringify(list) );
 
     // this.reset();
 
@@ -73,3 +75,8 @@ delBtn.addEventListener("click",clearDisplay)
 
 // btnVisibility()
 
+// showBtn.addEventListener("click",() =>{
+    //  localStorage.setItem("items", JSON.stringify(list) );
+
+
+// }  )
