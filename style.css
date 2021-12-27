@@ -1,148 +1,136 @@
 html {
-    background: url("./jessica-lewis-fJXv46LT7Xk-unsplash.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
+  background: url("./jessica-lewis-fJXv46LT7Xk-unsplash.jpg") no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .todo-container {
-    /* box-sizing: border-box; */
-    /* border: 2px white; */
-    background-color: #9CA3AF;
-    opacity: 0.9;
-    padding: 1rem;
-    width: 90%;
-    max-width: 600px;
-    margin: 90px auto;
-    text-align: center;
-    border-radius: 2%;
-    box-shadow: 1px 1px 5px black;
-    overflow-y: hidden;
+  /* box-sizing: border-box; */
+  /* border: 2px white; */
+  background-color: #9ca3af;
+  opacity: 0.9;
+  padding: 1rem;
+  width: 90%;
+  max-width: 600px;
+  margin: 90px auto;
+  text-align: center;
+  border-radius: 2%;
+  box-shadow: 1px 1px 5px black;
+  overflow-y: hidden;
 }
 
 .input-todo {
-     max-width: 50%; 
-    padding: 0.5rem;
-    border-radius: 20px;
-    background-color: #374151;
-    color: whitesmoke;
-    font-size: large;
-
+  max-width: 50%;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: #374151;
+  color: whitesmoke;
+  font-size: large;
 }
 
 h1 {
-    font-family: cursive;
+  font-family: cursive;
 }
 
 .todo-list {
-    
-    padding:  0 ;
-    margin: 1.5em 0 ;
-    font-family: cursive;
-    font-size: larger;
-    list-style-type: none;
-    /* display: inline;
+  padding: 0;
+  margin: 1.5em 0;
+  font-family: cursive;
+  font-size: larger;
+  list-style-type: none;
+  /* display: inline;
     padding-inline-start: unset;
     align-items: center; */
-
 }
-.add-btn{
-    padding: 0.4rem;
-    margin-left: 2%;
-    border-radius: 10%;
-    cursor: pointer;
-    font-family:sans-serif;
-    font-size: large;
-    transition: 0.3s;
-    background-color: #374151;
-    color: whitesmoke;
-
+.add-btn {
+  padding: 0.4rem;
+  margin-left: 2%;
+  border-radius: 10%;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: large;
+  transition: 0.3s;
+  background-color: #374151;
+  color: whitesmoke;
 }
 .del-btn {
-    padding: 0.4rem;
+  padding: 0.4rem;
 
-    border-radius: 10%;
-    cursor: pointer;
-    font-family:sans-serif;
-    font-size: large;
-    transition: 0.3s;
-    background-color: #374151;
-    color: whitesmoke;
-    display: none;
+  border-radius: 10%;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: large;
+  transition: 0.3s;
+  background-color: #374151;
+  color: whitesmoke;
+  display: none;
 }
 .del-visibility {
-    display:inline;
+  display: inline;
 }
 
-.add-item{
-    /* margin-left: 14%; */
-    /* width: 80%; */
-    /* max-width: 500px; */
-
+.add-item {
+  /* margin-left: 14%; */
+  /* width: 80%; */
+  /* max-width: 500px; */
 }
 
 .add-btn:hover {
-    background-color: whitesmoke;
-     color: black; 
-    opacity: 0.8;
-    box-shadow: 2px 2px 4px #000000;
-  }
+  background-color: whitesmoke;
+  color: black;
+  opacity: 0.8;
+  box-shadow: 2px 2px 4px #000000;
+}
 
-.li-class{
-    /* text-align: center; */
-    padding:  0 ;
-    margin: 1.5em 0 ;
-    font-family: cursive;
-    font-size: 24px;
-    list-style-type: none;
+.li-class {
+  /* text-align: center; */
+  padding: 0;
+  margin: 1.5em 0;
+  font-family: cursive;
+  font-size: 24px;
+  list-style-type: none;
 }
 
 .todo-list > .list-item {
-    border-bottom: 2px solid;
-    display: flex;
-    max-width: 80%;
-    /* margin-left: 25px; */
-    align-items: center;
-    opacity: 0.9;
+  border-bottom: 2px solid;
+  display: flex;
+  max-width: 80%;
+  /* margin-left: 25px; */
+  align-items: center;
+  opacity: 0.9;
 }
 
 .list-item {
-    margin: 0 auto;
-    /* padding: 0.2rem; */
+  margin: 0 auto;
+  /* padding: 0.2rem; */
 }
 .checkBox {
-    margin: 0.5rem;
-    padding: 1rem;
-    margin-top: 0.8rem;
-    cursor: pointer;
-    
+  margin: 0.5rem;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  cursor: pointer;
 }
-
-
 
 .line-through {
-    text-decoration: line-through;
-    opacity: 0.7;
-
+  text-decoration: line-through;
+  opacity: 0.7;
 }
 
-
-
-.fab{
-    color: cadetblue;
-    font-size: larger;
-    padding: 1rem;
-    text-align:center;
-    justify-content:center;
+.fab {
+  color: rgb(200, 228, 230);
+  font-size: larger;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
 }
 
-
-
-
-
-
-
-
-
+.links {
+  max-width: 50%;
+  margin: 30px auto;
+  margin-top: 200px;
+  padding-top: 60px;
+  text-align: center;
+}
