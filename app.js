@@ -9,8 +9,19 @@ const showBtn = document.querySelector("#show-btn")
 addBtn.addEventListener("click", displayToDoList);
 
 
+
 let list = JSON.parse(localStorage.getItem("items")) || [];
 let checkboxes;
+   toDoList.innerHTML = list.map((items, i) => {
+
+    return `<li class="list-item" > 
+     <input type="checkBox" class="checkBox"  data-index=${i}   id="item${i}"   />
+     <label for="item${i}"  class="checkbox-name" id="lable${i}" > ${items.name} </label>
+     </li> `
+}).join("");
+
+
+
 
 
 function displayToDoList(event) {
